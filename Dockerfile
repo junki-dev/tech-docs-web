@@ -8,7 +8,7 @@ COPY tsconfig.json tsconfig.json
 
 COPY . .
 
-ENV NEXT_PUBLIC_DOCS_API_ENDPOINT=${NEXT_PUBLIC_DOCS_API_ENDPOINT}
+ENV NEXT_PUBLIC_DOCS_API_ENDPOINT=http://34.160.228.181/docs/
 
 RUN yarn install
 

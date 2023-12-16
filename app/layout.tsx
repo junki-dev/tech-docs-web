@@ -27,7 +27,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={'w-screen h-screen bg-my-bg-1 text-my-font-1'}>
+      <body
+        className={
+          'w-screen h-screen bg-my-bg-1 text-my-font-1 overflow-x-hidden'
+        }
+      >
         <ReactQueryProvider>
           <Box>
             <Header />
