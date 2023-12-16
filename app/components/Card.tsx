@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Doc } from '@/app/types/doc.types'
 import moment from 'moment'
 import { Ref } from 'react'
-import TossLogoPng from '../../public/toss_logo.png'
 
 interface DocProps {
   data: Doc
@@ -28,7 +27,7 @@ export default function Card({ data, innerRef }: DocProps) {
             {data.title}
           </h5>
           <div className="flex h-8 items-center w-full mb-1 mt-auto text-my-font-2">
-            <Image src={TossLogoPng} alt="toss" width={64} height={64} />
+            <Image src={'/toss_logo.png'} alt="toss" width={64} height={64} />
             <small className={'h-4'}>
               {moment(data.createdAt).format('YYYY.MM.DD')}
             </small>
