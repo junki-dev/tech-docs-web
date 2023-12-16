@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: tech-docs-web
+  name: tech-docs-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tech-docs-web
+  template:
+    metadata:
+      labels:
+        app: tech-docs-web
+    spec:
+      containers:
+      - image: asia-northeast3-docker.pkg.dev/tech-docs-408301/tech-docs-web/production
+        name: tech-docs-web
+        ports:
+          - containerPort: 3000
+
+
