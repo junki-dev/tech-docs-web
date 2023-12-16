@@ -4,6 +4,8 @@ steps:
     args:
       [
         'build',
+        '--build-arg',
+        'NEXT_PUBLIC_DOCS_API_ENDPOINT=http://34.160.228.181/docs/',
         '-t',
         'asia-northeast3-docker.pkg.dev/tech-docs-408301/tech-docs-web/production',
         '-f',

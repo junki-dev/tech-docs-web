@@ -8,6 +8,8 @@ COPY tsconfig.json tsconfig.json
 
 COPY . .
 
+ENV NEXT_PUBLIC_DOCS_API_ENDPOINT=${NEXT_PUBLIC_DOCS_API_ENDPOINT}
+
 RUN yarn install
 
 RUN yarn build
