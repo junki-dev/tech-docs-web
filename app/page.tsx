@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer'
 
 async function getDocs({ pageParam }: { pageParam: number }) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_DOCS_API_ENVPOINT}?limit=12&page=${pageParam}&sortField=createdAt&sortOrder=desc`,
+    `${process.env.NEXT_PUBLIC_DOCS_API_ENDPOINT}?limit=12&page=${pageParam}&sortField=createdAt&sortOrder=desc`,
   )
   if (!response.ok) {
     throw new Error(`Failed to fetch documentation data`)
