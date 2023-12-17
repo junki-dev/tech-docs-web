@@ -14,7 +14,7 @@ export default function Card({ data, innerRef }: DocProps) {
       ref={innerRef}
       className="mx-3 h-128 min-w-64 mt-6 bg-my-bg-2 flex flex-col shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.1)] sm:shrink-0 sm:grow sm:basis-0 text-center items-center"
     >
-      <a className={'w-full'} href={data.originUri}>
+      <a className={'w-full'} target={'_blank'} href={data.originUri}>
         <div className={'h-96'}>
           <img
             className="h-96 w-full mt-0 object-cover object-center"

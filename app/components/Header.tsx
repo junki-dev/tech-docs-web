@@ -10,13 +10,13 @@ export default function Header() {
       >
         <div className={'flex justify-between'}>
           <div>
-            <Link href={'/'}>
+            <Link href={'/docs'}>
               <h1 className={'text-4xl'}>TECHNICAL DOCUMENTATION</h1>
             </Link>
           </div>
           <div className={'text-xl'}>
             <div>
-              <Link href={'/'}>
+              <Link href={'/docs'}>
                 <span>JUNKI KIM</span>
               </Link>
             </div>
