@@ -16,18 +16,40 @@ export default function Card({ data, innerRef }: DocProps) {
     >
       <a className={'w-full'} target={'_blank'} href={data.originUri}>
         <div className={'h-96'}>
-          <img
-            className="h-96 w-full mt-0 object-cover object-center"
-            src={data.imageUri}
-            alt="Skyscrapers"
-          />
+          {data.imageUri ? (
+            <img
+              className="h-96 w-full mt-0 object-cover object-center"
+              src={data.imageUri}
+              alt="Skyscrapers"
+            />
+          ) : (
+            <Image
+              src={'/inflearn_base.png'}
+              alt="inflearn_base"
+              width={0}
+              height={0}
+              sizes={'100vw'}
+              className={'w-full'}
+            />
+          )}
         </div>
         <div className="h-32 flex flex-col w-full pt-8 pr-8 pl-8 pb-0">
           <h5 className="h-24 w-full font-medium leading-tight text-my-font-1 text-left">
             {data.title}
           </h5>
           <div className="flex h-8 items-center w-full mb-1 mt-auto text-my-font-2">
-            <Image src={'/toss_logo.png'} alt="toss" width={64} height={64} />
+            {data.company === 'toss' ? (
+              <Image src={'/toss_logo.png'} alt="toss" width={58} height={58} />
+            ) : (
+              <Image
+                className={'mr-1'}
+                src={'/inflearn_logo.png'}
+                alt="inflearn"
+                width={48}
+                height={48}
+              />
+            )}
+
             <small className={'h-4'}>
               {moment(data.createdAt).format('YYYY.MM.DD')}
             </small>

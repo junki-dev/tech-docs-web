@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import { Doc } from '@/app/types/doc.types'
 import { useInView } from 'react-intersection-observer'
 
+console.log(process.env.NEXT_PUBLIC_DOCS_API_ENDPOINT)
 async function getDocs({ pageParam }: { pageParam: number }) {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_DOCS_API_ENDPOINT}?limit=12&page=${pageParam}&sortField=createdAt&sortOrder=desc`,
