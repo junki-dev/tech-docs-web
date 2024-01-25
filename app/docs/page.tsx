@@ -89,7 +89,7 @@ export default function Docs() {
     <div>
       <div className="mb-4 w-full">
         <ul
-          className="flex flex-wrap justify-center -mb-px text-2xl font-light text-center"
+          className="flex flex-wrap justify-center text-2xl font-light text-center"
           id="default-tab"
           data-tabs-toggle="#default-tab-content"
           role="tablist"
@@ -131,7 +131,7 @@ export default function Docs() {
         </ul>
       </div>
 
-      <div className="grid-cols-1 sm:grid md:grid-cols-3">
+      <div className="grid-cols-1 md:grid lg:grid-cols-2 xl:grid-cols-3">
         {content}
         {isFetchingNextPage && <h4>Loading...</h4>}
       </div>

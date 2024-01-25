@@ -5,7 +5,7 @@ export default function Header() {
     <>
       <header
         className={
-          'h-1/12 w-full sticky top-0 z-2 backdrop-blur-sm text-my-font-2 font-bold'
+          'h-1/12 w-full sticky top-0 z-2 backdrop-blur-sm mt-8 text-my-font-2 font-bold'
         }
       >
         <div className={'flex justify-between'}>
